@@ -1,5 +1,5 @@
 .record {
-  background: url(http://rs1037.pbsrc.com/albums/a454/redwine-n-strawberries/I%20Adore/kool9-fragglerock.gif~c200) center center #222222;
+  background: url(http://i.imgur.com/FKRMMap.gif) center center #222222;
   background-size: cover;
   border: #000 solid 35px;
   border-radius: 50%;
@@ -13,10 +13,10 @@
 }
 
 .rotate {
-    -webkit-animation: infinite-spinning linear 2s infinite;
-    -moz-animation: infinite-spinning linear 2s infinite;
-    -o-animation: infinite-spinning linear 2s infinite;
-    animation: infinite-spinning linear 2s infinite;
+    -webkit-animation: infinite-spinning linear 3s infinite;
+    -moz-animation: infinite-spinning linear 3s infinite;
+    -o-animation: infinite-spinning linear 3s infinite;
+    animation: infinite-spinning linear 3s infinite;
 }
 
 @-webkit-keyframes infinite-spinning {
