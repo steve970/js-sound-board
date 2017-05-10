@@ -17,6 +17,9 @@
     -moz-animation: infinite-spinning linear 3s infinite;
     -o-animation: infinite-spinning linear 3s infinite;
     animation: infinite-spinning linear 3s infinite;
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
 }
 
 @-webkit-keyframes infinite-spinning {

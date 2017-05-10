@@ -1,18 +1,36 @@
 $(document).ready(function() {
 
-  $(".record").on("click", function() {
-    $(this).toggleClass('rotate');
-    if ($(this).hasClass('rotate')) {
-      // playTrack($('#didgi3').get(0));
-      $('#stopwatch').timer('resume');
-      // layerTracks();
-      // playSymphony();
-    }
-    else {
-      $('#stopwatch').timer('pause');
-      stopTracks($('audio'));
-    }
+  var imgs = $('.pic'),
+    playState = ['animation-play-state', '-moz-animation-play-state', '-webkit-animation-play-state'];
+
+    imgs.click(function() {
+    imgs.css(playState, function(i, v) {
+      return v === 'paused' ? 'running' : 'paused';
+    });
+    $('body').toggleClass('paused', $(this).css(playState) === 'paused');
+  });
+
+  $(".record").on("click", function () {
+    var animate = $('.rotate').css(playState);
+    console.log(animate);
+    $.each(animate, function(prop, value) {
+      
+    })
   })
+
+  // $(".record").on("click", function() {
+  //   $(this).toggleClass('rotate');
+  //   if ($(this).hasClass('rotate')) {
+  //     // playTrack($('#didgi3').get(0));
+  //     $('#stopwatch').timer('resume');
+  //     // layerTracks();
+  //     // playSymphony();
+  //   }
+  //   else {
+  //     $('#stopwatch').timer('pause');
+  //     stopTracks($('audio'));
+  //   }
+  // })
 
   $(document).on('keydown', function (event) {
     if (event.which === 65) { // keyboard a
@@ -94,10 +112,10 @@ $(document).ready(function() {
     }
   })
 
-  $(".record").dblclick(function () {
-    $(this).toggleClass('rotate');
-    playTrack($('#scratching').get(0));
-  })
+  // $(".record").dblclick(function () {
+  //   $(this).toggleClass('rotate');
+  //   playTrack($('#scratching').get(0));
+  // })
 
 })
 
@@ -116,14 +134,3 @@ function stopTracks (audioElem) {
     $(this).get(0).currentTime = 0;
   })
 }
-
-// function layerTracks () {
-//   setTimeout(function(){ playTrack($('#entertain').get(0)); }, 3000);
-// }
-
-// function playSymphony () {
-//   setTimeout(function(){ playTrack($('#drums5').get(0)); }, 3500);
-//   setTimeout(function(){ playTrack($('#didgi1').get(0)); }, 1000);
-//   setTimeout(function(){ stopTracks($('audio')); }, 42500);
-//   setTimeout(function(){ playTrack($('#annoy').get(0)); }, 42501);
-// }
