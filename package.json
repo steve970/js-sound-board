@@ -1,0 +1,24 @@
+{
+  "name": "soundboard",
+  "version": "1.0.0",
+  "description": "soundboard - make music with your keyboard",
+  "engines": {
+    "node": "6.10.2"
+  },
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/steve970/js-sound-board/"
+  },
+  "keywords": [
+    "steve970.github.io"
+  ],
+  "author": "Steve Hirschhorn",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
